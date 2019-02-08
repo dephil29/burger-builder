@@ -1,3 +1,7 @@
 burger folder created, burgeringredient files created, 8-150
 
 added prop-types, changed BurgerIngredient.js from functional to class, 8-151
+
+render burger to screen. 8-152
+
+8-153

@@ -1,1 +1,3 @@
-burger folder created, , 8-150
+burger folder created, burgeringredient files created, 8-150
+
+added prop-types, changed BurgerIngredient.js from functional to class, 8-151

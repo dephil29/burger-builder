@@ -8,4 +8,6 @@ added function to map over state object for dynamic burger. 8-153
 
 added logic to check . 8-154
 
-added BuildControls folder and files,
+added BuildControl folder and files, 8-155
+
+logic for BuildControls controls.map, 

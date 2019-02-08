@@ -5,3 +5,7 @@ added prop-types, changed BurgerIngredient.js from functional to class, 8-151
 render burger to screen. 8-152
 
 added function to map over state object for dynamic burger. 8-153
+
+added logic to check . 8-154
+
+added BuildControls folder and files,

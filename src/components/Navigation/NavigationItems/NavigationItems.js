@@ -11,13 +11,13 @@ const navigationItems = () => (
     active
       link="/"
     >
-    blah
+    Burger Builder
     </NavigationItem>
     <NavigationItem
     active
       link="/"
     >
-    blah
+    Checkout
     </NavigationItem>
   </ul>
 );

@@ -7,12 +7,12 @@ import Toolbar from '../Navigation/Toolbar/Toolbar';
 
 class Layout extends Component {
   state = {
-    showSideDrawer: true
+    showSideDrawer: false
   }
 
   sideDrawerClosedHandler = () => {
     this.setState({
-      showSideDrawer: false
+      showSideDrawer: true
     })
   }
 
@@ -27,19 +27,19 @@ class Layout extends Component {
   render() {
     return (
       <Aux>
-      <Toolbar 
-        drawerToggleClicked={this.sideDrawerToggleHandler}
-      />
-      <SideDrawer 
-        closed={this.sideDrawerClosedHandler}
-        open={this.state.showSideDrawer}
-      />
-      <main
-        className={classes.Content}
-      >
-        {this.props.children}
-      </main>
-    </Aux>
+        <Toolbar 
+          drawerToggleClicked={this.sideDrawerToggleHandler}
+        />
+        <SideDrawer 
+          closed={this.sideDrawerClosedHandler}
+          open={this.state.showSideDrawer}
+        />
+        <main
+          className={classes.Content}
+        >
+          {this.props.children}
+        </main>
+      </Aux>
     )
   }
 

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Aux from '../../hoc/Auxiliary';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Burger from '../../components/Burger/Burger';
+import axios from '../../axios-orders';
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
@@ -81,7 +82,24 @@ class BurgerBuilder extends Component {
   };
 
   purchaseContinueHandler = () => {
-    alert('You continue');
+    // alert('You continue');
+    const order = {
+      ingredients: this.state.ingredients,
+      price: this.state.totalPrice,
+      customer: {
+        name: 'eric',
+        address: {
+          street: 'test street 1',
+          zipCode: '41351',
+          country: 'USA'
+        },
+        email: 'test@test.com',
+        deliveryMethod: 'fastest'
+      }
+    }
+    axios.post('/orders.json', order)
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
   }
 
   render(){

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import classes from './withErrorHandler.css';
 import Modal from '../../components/UI/Modal/Modal';
 import Aux from '../Auxiliary';
 
@@ -40,22 +41,11 @@ const withErrorHandler = (WrappedComponent, axios) => {
             clicked={this.errorConfirmedHandler}
           >
             {this.state.error ? 
-              <p style={{
-                textAlign: 'center',
-                fontWeight: 'bold',
-                color: 'red',
-                fontSize: '50px'
-              }}>{this.state.error.message}
+              <p 
+                className={classes.Error}
+              >{this.state.error.message}
               </p> 
             : null}
-            {/* <p style={{
-              textAlign: 'center',
-              fontWeight: 'bold',
-              color: 'red',
-              fontSize: '50px'
-            }}>OMAN!!<br/>
-            SOMETHIN'S NOT WORKIN!!!
-            </p> */}
           </Modal>
           <WrappedComponent {...this.props} />
         </Aux>

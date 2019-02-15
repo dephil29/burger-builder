@@ -6,13 +6,14 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 class Orders extends Component {
   state = {
-    order: [],
+    orders: [],
     loading: true
   }
 
   componentDidMount(){
     axios.get("orders.json")
       .then(res => {
+        console.log(res.data)
         const fetchedOrders = [];
         for(let key in res.data){
           fetchedOrders.push({
@@ -20,7 +21,7 @@ class Orders extends Component {
             id: key
           });
         }
-        this.setState({loading: false, order: fetchedOrders});
+        this.setState({loading: false, orders: fetchedOrders});
       })
       .catch(err => {
         this.setState({loading: false});
@@ -29,8 +30,13 @@ class Orders extends Component {
   render () {
     return (
       <div>
-        <Order />
-        <Order />
+        {this.state.orders.map(order => (
+          <Order 
+            key={order.id} 
+            ingredients={order.ingredients}
+            price={+order.price}
+          />
+        ))}
       </div>
     );
   }

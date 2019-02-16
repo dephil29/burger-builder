@@ -1,3 +1,5 @@
+// check 13-270 to add a error message for invalid inputs
+
 import React from 'react';
 
 import classes from './Input.css';

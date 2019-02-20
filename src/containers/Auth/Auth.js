@@ -64,7 +64,7 @@ class Auth extends Component {
       ...this.state.controls,
       [controlName]: {
         ...this.state.controls[controlName],
-        value: event.target.vlaue,
+        value: event.target.value,
         valid: this.checkValidity(event.target.value, this.state.controls[controlName].validation),
         touched: true
       }
@@ -74,7 +74,7 @@ class Auth extends Component {
 
   submitHandler = event => {
     event.preventDefault();
-    this.props.onAuth(this.state.controls.email.value, this.state.controls.email.password)
+    this.props.onAuth(this.state.controls.email.value, this.state.controls.password.value)
   }
 
   render(){

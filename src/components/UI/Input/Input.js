@@ -15,6 +15,7 @@ const input = props => {
   switch(props.elementType){
     case("input"):
       inputElement = <input 
+        autoComplete="on"
         className={inputClasses.join(" ")} 
         {...props.elementConfig}
         onChange={props.changed} 
@@ -46,6 +47,7 @@ const input = props => {
       break;
     default: 
       inputElement = <input 
+        autoComplete="on"
         className={inputClasses.join(" ")} 
         {...props.elementConfig} 
         value={props.value} 

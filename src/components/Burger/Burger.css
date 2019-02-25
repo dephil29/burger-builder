@@ -6,8 +6,25 @@
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
-  
+  scrollbar-color: #fff #703B09;
+  scrollbar-width: 1em;
 }
+
+
+.Burger::-webkit-scrollbar {
+  width: 1em;
+}
+
+.Burger::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px #703B09;
+  /* -webkit-border: 1px solid black; */
+}
+
+.Burger::-webkit-scrollbar-thumb {
+background-color: #703B09;
+outline: 1px solid #703B09;
+}
+
 
 @media(min-width: 500px) and (min-height: 400px){
   .Burger{

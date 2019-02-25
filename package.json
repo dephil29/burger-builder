@@ -1,6 +1,7 @@
 {
   "name": "burger-builder",
   "version": "0.1.0",
+  "homepage": "http://ericphillips.xyz/burger-builder",
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.6",

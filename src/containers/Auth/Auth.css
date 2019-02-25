@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+.Auth button:focus {
+  border: 1px solid #703B09;
+}
+
 @media(min-width: 600px){
   .Auth {
     width: 500px;

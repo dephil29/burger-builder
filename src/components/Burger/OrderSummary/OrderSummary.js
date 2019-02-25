@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Aux from '../../../hoc/Auxiliary';
 import Button from '../../UI/Button/Button';
+import classes from './OrderSummary.css';
 
 class OrderSummary extends Component {
   render() {
@@ -21,10 +22,12 @@ class OrderSummary extends Component {
         <p><strong>Total Price: {this.props.price.toFixed(2)}</strong></p>
         <p>Continue to Checkout?</p>
         <Button
+          className={classes.OrderSummaryButton}
           btnType="Danger"
           clicked={this.props.purchaseCancelled}
         >CANCEL</Button>
         <Button
+          className={classes.OrderSummaryButton}
           btnType="Success"
           clicked={this.props.purchaseContinued}
         >CONTINUE</Button>
